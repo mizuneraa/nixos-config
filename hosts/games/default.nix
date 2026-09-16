@@ -1,6 +1,6 @@
 # host: games
 # desktop pc — gaming/multimedia
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, lib, ... }:
 
 {
   imports = [
@@ -23,7 +23,8 @@
   ];
 
   networking.hostName = "games";
-
+  console.keyMap = "fr";
+  services.xserver.xkb.layout = lib.mkForce "fr";
   fyrr.wayle.runtimeFile = ../../config/wayle/runtime-games.toml;
 
   boot.kernelModules = [ "nct6775" ];

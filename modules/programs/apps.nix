@@ -4,7 +4,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    bitwarden
+    bitwarden-desktop
     brave
     kdePackages.ark
     kdePackages.dolphin # file manager
