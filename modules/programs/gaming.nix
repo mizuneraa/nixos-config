@@ -14,15 +14,6 @@
     pkgs.jdk25
     pkgs.archipelago
     pkgs.poptracker # progression tracker for archipelago randomizers
-    (pkgs.sm64coopdx.overrideAttrs (_: {
-      version = "1.5.1";
-      src = pkgs.fetchFromGitHub {
-        owner = "coop-deluxe";
-        repo = "sm64coopdx";
-        tag = "v1.5.1";
-        hash = "sha256:18c3b3y78nyw384wbd1rrgkmd2ssmxr48bgz3jdp81nl71fn79q1";
-      };
-    }))
   ];
 
   # nintendo controller udev rules (joy-con, pro controller)
