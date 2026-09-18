@@ -57,7 +57,6 @@ local menu        = "rofi -show drun"
 --
 hl.on("hyprland.start", function ()
     hl.exec_cmd("wayle panel start")
-    hl.exec_cmd("awww-daemon && sleep 1 && awww img /home/paul/code/nixos-config/wallpapers/01-cwb.jpg")
 --   hl.exec_cmd("nm-applet")
 --   hl.exec_cmd("waybar & hyprpaper & firefox")
 end)

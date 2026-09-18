@@ -8,7 +8,6 @@
 
   environment.systemPackages = with pkgs; [
     rofi
-    awww
     brightnessctl
     wayle
     hyprshot

@@ -13,7 +13,6 @@ let
   hyprlockConf = pkgs.writeText "hyprlock.conf" ''
     background {
         monitor =
-        path = /home/paul/code/nixos-config/wallpapers/01-cwb.jpg
         blur_passes = 3
         blur_size = 8
     }
