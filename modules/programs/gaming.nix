@@ -23,4 +23,5 @@
     SUBSYSTEM=="hidraw", ATTRS{idVendor}=="3367", ATTRS{idProduct}=="1976", MODE="0666"
     SUBSYSTEM=="hidraw", ATTRS{idVendor}=="3367", ATTRS{idProduct}=="1966", MODE="0666"
   '';
-  boot.kernelModules = [ "hid-nintendo" ];}
+  boot.kernelModules = [ "hid-nintendo" ];
+}

@@ -1,7 +1,11 @@
-
 # host: games
 # desktop pc — gaming/multimedia
-{ pkgs, inputs, lib, ... }:
+{
+  pkgs,
+  inputs,
+  lib,
+  ...
+}:
 
 {
   imports = [
@@ -30,8 +34,8 @@
   nixpkgs.config.permittedInsecurePackages = [ "electron-39.8.10" ];
 
   system.stateVersion = "25.11";
-environment.systemPackages = with pkgs; [
-  kdePackages.kdenlive
+  environment.systemPackages = with pkgs; [
+    kdePackages.kdenlive
     (rustPlatform.buildRustPackage {
       pname = "egctl";
       version = "unstable";
@@ -45,4 +49,5 @@ environment.systemPackages = with pkgs; [
       nativeBuildInputs = [ pkg-config ];
       buildInputs = [ udev ];
     })
-  ];}
+  ];
+}
