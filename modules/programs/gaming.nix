@@ -16,10 +16,11 @@
     pkgs.poptracker # progression tracker for archipelago randomizers
   ];
 
-  # nintendo controller udev rules (joy-con, pro controller)
+  # udev rules: nintendo controllers + endgame gear mouse (non-root hid access)
   services.udev.extraRules = ''
     SUBSYSTEM=="usb", ATTRS{idVendor}=="057e", ATTRS{idProduct}=="0337", MODE="0666"
+    SUBSYSTEM=="hidraw", ATTRS{idVendor}=="3367", ATTRS{idProduct}=="1978", MODE="0666"
+    SUBSYSTEM=="hidraw", ATTRS{idVendor}=="3367", ATTRS{idProduct}=="1976", MODE="0666"
+    SUBSYSTEM=="hidraw", ATTRS{idVendor}=="3367", ATTRS{idProduct}=="1966", MODE="0666"
   '';
-
-  boot.kernelModules = [ "hid-nintendo" ];
-}
+  boot.kernelModules = [ "hid-nintendo" ];}
