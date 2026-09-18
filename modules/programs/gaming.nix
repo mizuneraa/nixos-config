@@ -14,6 +14,7 @@
     pkgs.jdk25
     pkgs.archipelago
     pkgs.poptracker # progression tracker for archipelago randomizers
+    pkgs.lutris
   ];
 
   # udev rules: nintendo controllers + endgame gear mouse (non-root hid access)
