@@ -14,7 +14,7 @@ local hostname = io.open("/etc/hostname"):read("*l")
 local theme = require("hypr-theme")
 
 -- scale moniteur : adapté à l'écran de chaque machine
-local monitorScale = hostname == "games" and 1.07 or 1.8
+local monitorScale = hostname == "games" and 1.0 or 1.8
 local monitorMode = hostname == "games" and "2560x1440@360" or "preferred"
 
 -- this section tells hyprland how to set up your displays.
